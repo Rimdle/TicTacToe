@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29369E3D-530C-44AB-A38A-A2589DE691EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TicTacToe</RootNamespace>
+    <AssemblyName>TicTacToe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTT.Designer.cs">
+      <DependentUpon>TTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TTT.resx">
+      <DependentUpon>TTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\MinBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\ExitBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\ExitBtnDwn.png" />
+    <EmbeddedResource Include="img\MinBtnDwn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\NGBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\NGBtnDwn.png" />
+    <EmbeddedResource Include="img\NGBtnHvr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Diff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Easy.png" />
+    <EmbeddedResource Include="img\EasyDwn.png" />
+    <EmbeddedResource Include="img\EasyHvr.png" />
+    <EmbeddedResource Include="img\Hard.png" />
+    <EmbeddedResource Include="img\HardDwn.png" />
+    <EmbeddedResource Include="img\HardHvr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Tac.png" />
+    <EmbeddedResource Include="img\Toe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\LossDL.png" />
+    <EmbeddedResource Include="img\LossDR.png" />
+    <EmbeddedResource Include="img\LossH.png" />
+    <EmbeddedResource Include="img\LossV.png" />
+    <EmbeddedResource Include="img\WinDL.png" />
+    <EmbeddedResource Include="img\WinDR.png" />
+    <EmbeddedResource Include="img\WinH.png" />
+    <EmbeddedResource Include="img\WinV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Defeat.png" />
+    <EmbeddedResource Include="img\Draw.png" />
+    <EmbeddedResource Include="img\Victory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\EndText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\FieldHvr.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
